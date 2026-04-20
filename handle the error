@@ -1,0 +1,8 @@
+try:
+    lst = list(map(int, input("Enter the list of elements:" ).split()))
+    i = int(input("Enter the index:"))
+    print(lst[i])
+except ValueError:
+    print("Error: Invalid input")
+except IndexError:
+    print("Error: Index out of range")
