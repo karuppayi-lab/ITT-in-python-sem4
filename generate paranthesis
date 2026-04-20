@@ -1,0 +1,15 @@
+class Solution:
+   def generateParenthesis(n):
+      res = []
+   def solve(s, open_count, close_count):
+      if len(s) == n * 2:
+         res.append(s)
+      return
+      if open_count < n:
+         solve(s + "(", open_count + 1, close_count)
+      if close_count < open_count:
+         solve(s + ")", open_count, close_count + 1)
+      solve("", 0, 0)
+      return res
+sol=Solution()
+print( sol.generateParenthesis(3))
