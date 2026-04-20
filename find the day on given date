@@ -1,0 +1,9 @@
+import datetime
+def find_day():
+    try:
+        day, month, year = map(int, input("Enter the date:").split())
+        d = datetime.date(year, month, day)
+        print(d.strftime("%A").upper())
+    except ValueError:
+        pass
+find_day()
